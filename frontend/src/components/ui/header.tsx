@@ -49,6 +49,28 @@ export default function Header() {
                 Register
               </Link> */}
             </li>
+
+            <li style={{ color: "grey" }}>
+              <Link
+                href="/raids"
+                className=" text-gray-800  hover:bg-gray-50 "
+                style={{ padding: "10px" }}
+              >
+                Brands
+              </Link>
+            </li>
+
+            <li style={{ color: "grey" }}>
+              <Link
+                href="/raids"
+                className=" text-gray-800  hover:bg-gray-50 "
+                style={{ padding: "10px" }}
+              >
+                Product
+              </Link>
+            </li>
+
+
             <li style={{ color: "grey" }}>
               <Link
                 href="/raids"
@@ -59,15 +81,7 @@ export default function Header() {
               </Link>
             </li>
 
-            <li style={{ color: "grey" }}>
-              <Link
-                href="/rent"
-                className=" text-gray-800  hover:bg-gray-50 "
-                style={{ padding: "10px" }}
-              >
-                Rent
-              </Link>
-            </li>
+          
 
             <li style={{ color: "grey" }}>
               <Link
@@ -89,7 +103,7 @@ export default function Header() {
               </Link>
             </li>
 
-            <li style={{ color: "grey" }}>
+            {/* <li style={{ color: "grey" }}>
               <Link
                 href="#"
                 className=" text-gray-800  hover:bg-gray-50 "
@@ -97,7 +111,7 @@ export default function Header() {
               >
                 Swap USDC
               </Link>
-            </li>
+            </li> */}
 
 
             <li style={{ color: "grey" }}>
@@ -118,7 +132,7 @@ export default function Header() {
             </li>
             <li>
               {/* <w3m-button /> */}
-              <w3m-connect-button/>
+              {/* <w3m-connect-button/> */}
               </li>
           </ul>
         </div>

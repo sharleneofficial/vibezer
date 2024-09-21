@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import "../../src/app/css/additional-styles/utility-patterns.css";
+@import "../../src/app/css/additional-styles/theme.css";
+
+@import "tailwindcss/utilities";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
