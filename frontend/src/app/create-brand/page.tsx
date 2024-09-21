@@ -13,8 +13,6 @@ import 'react-toastify/dist/ReactToastify.css'
 import { FaSpinner } from 'react-icons/fa';
 import { FaGlobe, FaTwitter, FaEnvelope, FaPhone, FaUser, FaLink } from 'react-icons/fa';
 
-
-
 // Initialize Supabase client
 const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,

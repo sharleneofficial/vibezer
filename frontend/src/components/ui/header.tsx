@@ -5,6 +5,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 
+import ConnectButton from "../connectButton";  
+
+
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
 
@@ -19,6 +22,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
 
+
   return (
     <header className="fixed top-2 z-30 w-full md:top-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -31,7 +35,6 @@ export default function Header() {
             <Logo />
           </div>
 
-          {/* Desktop sign in links */}
           <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
               {/* <Link
@@ -52,7 +55,7 @@ export default function Header() {
 
             <li style={{ color: "grey" }}>
               <Link
-                href="/raids"
+                href="/create-brand"
                 className=" text-gray-800  hover:bg-gray-50 "
                 style={{ padding: "10px" }}
               >
@@ -62,11 +65,11 @@ export default function Header() {
 
             <li style={{ color: "grey" }}>
               <Link
-                href="/products"
+                href="/create-product"
                 className=" text-gray-800  hover:bg-gray-50 "
                 style={{ padding: "10px" }}
               >
-                Product
+                Products
               </Link>
             </li>
 
@@ -114,7 +117,7 @@ export default function Header() {
             </li> */}
 
 
-            <li style={{ color: "grey" }}>
+            {/* <li style={{ color: "grey" }}>
               <Link
                 href="#"
                 className="btn-sm text-white shadow hover:opacity-90 transition-opacity"
@@ -129,6 +132,10 @@ export default function Header() {
               >
                 Connect Wallet
               </Link>
+            </li> */}
+
+            <li>
+              <ConnectButton /> 
             </li>
             <li>
               {/* <w3m-button /> */}
