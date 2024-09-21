@@ -1,5 +1,6 @@
-import "./css/style.css";
 
+import './css/style.css';
+import '../components/styles.css'
 
 import { Inter } from "next/font/google";
 
