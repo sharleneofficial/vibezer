@@ -80,7 +80,7 @@ export default function Header() {
                 className=" text-gray-800  hover:bg-gray-50 "
                 style={{ padding: "10px" }}
               >
-                Quest
+                Raids
               </Link>
             </li>
 
