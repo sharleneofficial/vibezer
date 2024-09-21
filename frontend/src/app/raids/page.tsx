@@ -1,23 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
-import raids_1 from "@/public/assets/raids_1.png";
-import raids_2 from "@/public/assets/raids_2.png";
-import raids_3 from "@/public/assets/raids_3.png";
-import raids_4 from "@/public/assets/raids_4.png";
-import raids_5 from "@/public/assets/raids_5.png";
-import raids_solo from "@/public/assets/RAIDS_SOLO.png";
-import raids_group from "@/public/assets/RAIDS_GROUP.png";
-import r1 from "@/public/assets/r1.png";
-import r2 from "@/public/assets/r2.png";
+import raids_1 from "../../../public/assets/raids_1.png";
+import raids_2 from "../../../public/assets/raids_2.png";
+import raids_3 from "../../../public/assets/raids_3.png";
+import raids_4 from "../../../public/assets/raids_4.png";
+import raids_5 from "../../../public/assets/raids_5.png";
+import raids_solo from "../../../public/assets/RAIDS_SOLO.png";
+import raids_group from "../../../public/assets/RAIDS_GROUP.png";
+import raids_party from "../../../public/assets/raids_party.jpg";
+
+import r1 from "../../../public/assets/r1.png";
+import r2 from "../../../public/assets/r2.png";
 import Nav from "../../components/ui/header";
-import "@/components/styles.css";
+import "../../app/css/style.css";
 import {
   BoltIcon,
   DocumentTextIcon,
   CurrencyDollarIcon,
 } from "@heroicons/react/24/outline";
 
-const Feature = ({ Icon, text }) => (
+interface FeatureProps {
+  Icon: any;
+  text: string;
+}
+
+const Feature: React.FC<FeatureProps> = ({ Icon, text }) => (
   <div className="flex items-center space-x-3">
     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
       <Icon className="w-5 h-5" />
@@ -73,42 +80,8 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* <div className="flex justify-center items-center gap-8 mt-12">
-        {[
-          { title: "Solo Ride", image: r1 },
-          { title: "Group Ride", image: r2 },
-          { title: "Event Ride", image: raids_5 },
-        ].map(({ title, image }) => (
-          <div
-            key={title}
-            className="relative overflow-hidden rounded-[25px] w-64 h-80 bg-white shadow-xl transition-all duration-300 hover:shadow-[0_0_10px_rgba(61,29,255,0.3),0_0_10px_rgba(97,71,255,0.3),0_0_10px_rgba(212,81,255,0.3),0_0_10px_rgba(236,69,141,0.3),0_0_10px_rgba(255,202,139,0.3)]"
-          >
-            <div className="h-full flex flex-col justify-between">
-              <div className="relative h-full">
-                <div className="absolute inset-0">
-                  <Image
-                    src={image}
-                    alt={title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div
-                className="absolute bottom-0 left-0 right-0 p-4 text-center"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(15.46deg, rgb(74, 37, 225) 26.3%, rgb(123, 90, 255) 86.4%)",
-                }}
-              >
-                <h3 className="text-xl font-bold text-white">{title}</h3>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div> */}
-
       {/* Solo Trip Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between p-8 bg-gray-100 min-h-screen ">
+      <div className="flex flex-col md:flex-row items-center justify-between p-10 pr-20 pl-20 bg-gray-100 min-h-screen ">
         <div className="md:w-1/2 mb-8 md:mb-0">
           <h2 className="text-sm font-semibold text-indigo-600 mb-2">
             SOLO TRIP
@@ -142,7 +115,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="md:w-1/4 relative mr-200">
+        <div className="md:w-1/3 relative mr-200">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-pink-500 opacity-50 blur-[124px] z-0" />
           <div className="relative z-10 bg-white rounded-lg shadow-xl p-6">
             <Image
@@ -155,7 +128,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Group Trip Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between p-8 bg-gray-100 min-h-screen">
+      <div className="flex flex-col md:flex-row items-center justify-between p-10 pr-20 pl-20 bg-gray-100 min-h-screen">
         <div className="md:w-1/3 relative mr-200">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-pink-500 opacity-50 blur-[124px] z-0" />
           <div className="relative z-10 bg-white rounded-lg shadow-xl p-6">
@@ -202,7 +175,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Event Trip Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between p-8 bg-gray-100 min-h-screen">
+      <div className="flex flex-col md:flex-row items-center p-10 pr-20 pl-20 justify-between p-8 bg-gray-100 min-h-screen">
         <div className="md:w-1/2 mb-8 md:mb-0">
           <h2 className="text-sm font-semibold text-indigo-600 mb-2">
             EVENT TRIP
@@ -239,7 +212,7 @@ const Home: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-pink-500 opacity-50 blur-[124px] z-0" />
           <div className="relative z-10 bg-white rounded-lg shadow-xl p-6">
             <Image
-              src={raids_3}
+              src={raids_party}
               alt="Event Trip Preview"
               className="w-full rounded-lg"
             />

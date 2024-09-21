@@ -13,6 +13,10 @@ import 'react-toastify/dist/ReactToastify.css'
 import { FaSpinner } from 'react-icons/fa';
 import { FaGlobe, FaTwitter, FaEnvelope, FaPhone, FaUser, FaLink } from 'react-icons/fa';
 
+import Header from '@/src/components/ui/header'
+
+import { useAccount } from 'wagmi'
+
 // Initialize Supabase client
 const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -58,6 +62,10 @@ interface BrandStats {
   revenue: number;
 }
 const CreateBrand: React.FC = () => {
+
+  const { address } = useAccount()
+
+  
   const router = useRouter()
   const [logoPreview, setLogoPreview] = useState<string | null>(null)
   const [coverPreview, setCoverPreview] = useState<string | null>(null)
@@ -169,12 +177,14 @@ const CreateBrand: React.FC = () => {
       reader.readAsDataURL(files[0])
     }
   }
-  
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    localStorage.setItem('wallet_address', address || '0xBc56DaAFe2C3C4F25761E5E0Ad62b010773F1780')
     
     const cookies = parseCookies()
+
     const walletAddress = cookies.wallet_address
 
     try {
@@ -241,6 +251,7 @@ const CreateBrand: React.FC = () => {
   if (existingBrand) {
     return (
       <div className="bg-gradient-to-br from-cyan-100 to-blue-200 min-h-screen p-8">
+       
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
             <div className="md:flex">
@@ -334,6 +345,9 @@ const CreateBrand: React.FC = () => {
 
   return (
     <div className="bg-white text-black min-h-screen p-8">
+      <div style={{margin:'20px',marginBottom:'80px'}}>
+      <Header/>
+      </div>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-6">CREATE YOUR BRAND</h1>
         <form onSubmit={handleSubmit}>

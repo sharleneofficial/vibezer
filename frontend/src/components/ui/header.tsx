@@ -80,7 +80,7 @@ export default function Header() {
                 className=" text-gray-800  hover:bg-gray-50 "
                 style={{ padding: "10px" }}
               >
-                Raids
+                Quest
               </Link>
             </li>
 
@@ -134,11 +134,11 @@ export default function Header() {
               </Link>
             </li> */}
 
-            <li>
+            {/* <li>
               <ConnectButton /> 
-            </li>
+            </li> */}
             <li>
-              {/* <w3m-button /> */}
+              <w3m-button /> 
               {/* <w3m-connect-button/> */}
               </li>
           </ul>
