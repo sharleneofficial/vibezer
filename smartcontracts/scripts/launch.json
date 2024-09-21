@@ -1,0 +1,9 @@
+{    
+        "contractName": "FanToken",
+        "constructorParams": {
+            "param1": "https://api.example.com/token/", 
+            "param2": "FanToken",
+            "param3": "FTK" 
+        }
+    
+}
