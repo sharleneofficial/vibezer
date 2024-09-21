@@ -62,7 +62,7 @@ export default function Header() {
 
             <li style={{ color: "grey" }}>
               <Link
-                href="/raids"
+                href="/products"
                 className=" text-gray-800  hover:bg-gray-50 "
                 style={{ padding: "10px" }}
               >
@@ -85,7 +85,7 @@ export default function Header() {
 
             <li style={{ color: "grey" }}>
               <Link
-                href="#"
+                href="/explore"
                 className=" text-gray-800  hover:bg-gray-50 "
                 style={{ padding: "10px" }}
               >
