@@ -31,7 +31,7 @@
     "tailwind": "^4.0.0",
     "tailwind-merge": "^2.5.2",
     "viem": "^2.21.10",
-    "wagmi": "^2.12.12"
+    "wagmi": "^2.12.7"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.9",

@@ -7,7 +7,9 @@ import { base, baseSepolia, polygonAmoy,sepolia,morphHolesky } from "viem/chains
 import { toast, ToastContainer } from "react-toastify";
 import Simplestore from "../../../lib/Simplestore.json";
 import Header from "../../../components/ui/header";
-import ethers from "ethers";
+import * as ethers from "ethers";
+// import { ethers } from "ethers";
+
 import { Hash } from "crypto";
 import "react-toastify/dist/ReactToastify.css";
 
